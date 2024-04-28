@@ -37,7 +37,7 @@
 
 // const promise3 = startAsync(15);
 // promise3
-//   .then(() => {
+//   .then(() =>
 //     console.log("2 then!");
 //   })
 //   .catch(() => {
@@ -60,3 +60,34 @@
 //   }
 
 // await
+
+// 자료형 (data type)
+// Primitive Type (원시 자료형) => 메모리 주소를 비교하지 않고, 값만 비교함
+// number, string, boolean, null, undefined, BigInt, Symbol
+
+// Reference Type (참조 자료형)
+// object, array, function, set, map, json,
+
+const num1 = [1, 2, 3];
+const num2 = [1, 2, 3];
+// 메모리 주소를 할당하는데 여러가지가 있음
+
+const isEquals = <T>(a: T, b: T) => num1 === num2;
+
+console.log(isEquals(num1, num2));
+
+// 함수를 만들 때
+// 인자와 리턴값이 무엇인지?
+// 함수를 만들 때도 함수의 목적을 먼저 생각하고, 인자와 리턴을 정의하고 구현해야한다.
+
+type Sum = (a: number, b: number) => number;
+
+const sum: Sum = (a, b) => {
+  return a + b;
+};
+
+const arr5 = [1, 2, 3, 4, 5, 6, 7, 8];
+
+arr5.forEach((v, i) => {
+  console.log(v, i);
+});
