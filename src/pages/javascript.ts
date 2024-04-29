@@ -91,3 +91,11 @@ const arr5 = [1, 2, 3, 4, 5, 6, 7, 8];
 arr5.forEach((v, i) => {
   console.log(v, i);
 });
+
+const c = arr5.map((v, i) => {
+  return "이번 인덱스는 ${i}이고, 값은 ${v}입니다.";
+});
+
+arr5.reduce((previousValue, currentValue) => {
+  return previousValue + currentValue;
+});
